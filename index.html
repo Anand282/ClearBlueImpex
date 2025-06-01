@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo/CLEAR_BLUE_LOGO.png" type="image/png">
+    <title>Clear Blue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- https://sheetdb.io/app/apis 
+ this is an api for the google sheet data load  -->
+</head>
+<body>
+    <header>
+        <div class="bar-container">
+            <div class="green-section"></div>
+            <div class="blue-section"></div>
+        </div>
+
+        <div class="logo-button-con">
+            <div class="logo">
+                <img src="./images/logo/logo2.jpg" alt="logo" class="logo-1">
+            </div>
+            <div class="button-right">
+                <button class="button-request" >REQUEST QUOTATION</button>
+                <button class="button-request" onclick="window.location.href='quotation.html'">REQUEST QUOTATION</button>
+
+            </div>
+        </div>
+
+        <div class="main-image">
+            <img src="./images/mainimg/main-image.jpg" class="main-img-header" alt="Main Image">
+        </div>
+        <div class="main-content">
+            <h1 class="main-h1">BRIDGING BORDER</h1>
+            <h1 class="main-h">DELIVERING EXCELLENCE</h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- services -->
+        <div class="services">
+            <img src="./images/ship/green.jpg" alt="ship" class="service-img">
+        </div>
+        <div>
+            <h2 class="text-ship-1">SERVICES WE OFFER</h2>
+        </div>
+
+        <div class="circle-container">
+            <div class="circle green"></div>
+            <div class="circle blue"></div>
+            <div class="circle green"></div>
+            <div class="circle blue"></div>
+        </div>
+        <!-- aboutus -->
+        <div class="about-us">
+            <div class="about-us-img">
+                <img src="./images/ship/blue.jpg" alt="ship" class="about-img">
+            </div>
+            <div class="about-us-text">
+                <h2 class="about-text">ABOUT US</h2>
+            </div>
+            <div class="about-us-content">
+
+            </div>
+        </div>
+        <br>
+        <!-- countries -->
+        <div class="countries">
+            <div class="countries-image-ship">
+                <img src="./images/ship/green.jpg" alt="ship" class="countries-img">
+            </div>
+            <div class="countries-content">
+                <h3 class="countries-text">COUNTRIES WE SERVE</h3>
+            </div>
+            <div>
+                <img src="./images/map/worldmap.png" alt="ship" class="countries-main-img">
+
+            </div>
+        </div>
+
+        <br>
+        <div class="gallery">
+            <div>
+                <img src="./images/ship/blue.jpg" alt="ship" class="gallery-img-ship">
+            </div>
+            <div>
+                <h2 class="gallery-text">GALLERY</h2>
+            </div>
+            <div class="gallery-content">
+
+            </div>
+        </div>
+        <br>
+        <!-- founder -->
+        <div class="founder-div">
+            <div>
+                <img src="./images/ship/green.jpg" alt="ship" class="about-img">
+
+            </div>
+            <div>
+                <h2 class="founder-text">FOUNDER</h2>
+
+            </div>
+            <div class="founder-content">
+
+            </div>
+        </div>
+        <br>
+        <!-- our clients -->
+        <div class="clients">
+            <div>
+                <img src="./images/ship/blue.jpg" alt="ship" class="client-img-ship">
+            </div>
+            <div>
+                <h2 class="client-text">OUR CLIENTS</h2>
+            </div>
+            <div class="box-container">
+                <div class="box green"></div>
+                <div class="box blue"></div>
+                <div class="box green"></div>
+            </div>
+        </div>
+        <br>
+        <!-- testimonials -->
+        <div class="testimonals">
+            <div>
+                <img src="./images/ship/green.jpg" alt="ship" class="testimonials-img">
+            </div>
+            <div>
+                <h2 class="testi-text">TESTIMONIALS</h2>
+            </div>
+            <div class="box-container">
+                <div class="box green-testi"></div>
+                <div class="box blue-testi"></div>
+                <div class="box green-testi"></div>
+            </div>
+        </div>
+        <!-- query -->
+        <div>
+            <div>
+                <img src="./images/ship/blue.jpg" alt="ship" class="client-img-ship">
+            </div>
+            <div>
+                <h2 class="drop-text">DROP A QUERY</h2>
+            </div>
+            <div class="form-container">
+
+                <form action="https://sheetdb.io/api/v1/iq001r61rx8x8" method="post" id="sheetdb-form">
+
+                    <div class="form-group">
+                        <label for="name" class="one">Name:
+                            <span class="error" id="name-error" style="color:red; font-size:14px;"></span>
+                        </label>
+                        <input type="text" id="name" name="data[name]" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact" class="one">Contact Number:
+                            <span class="error" id="contact-error" style="color:red; font-size:14px;"></span>
+                        </label>
+                        <input type="tel" id="contact" name="data[contact]" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="one">Email Address:
+                            <span id="email-error" style="color:red; font-size:14px;"></span>
+                        </label>
+                        <input type="email" id="email" name="data[email]" required>
+                    </div>
+
+                    <label for="country" class="one">Country:</label>
+                    <select class="form-select country" name="data[country]" onchange="loadStates()">
+                        <option selected>Select Country</option>
+                    </select>
+
+                    <label for="state" class="one">State:</label>
+                    <select class="form-select state" name="data[state]" onchange="loadCities()">
+                        <option selected>Select State</option>
+                    </select>
+
+                    <label for="city" class="one">City:</label>
+                    <select class="form-select city" name="data[city]">
+                        <option selected>Select City</option>
+                    </select>
+
+                    <div class="textarea-group">
+                        <label for="query" class="one">Type In Query:
+                            <span class="error" id="query-error" style="color:red; font-size:14px;"></span>
+                        </label>
+                        <textarea id="query" name="data[query]" rows="4" required></textarea>
+                    </div><br>
+                    <button class="submit" type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <p class="links">REGULATORY COMPLIANCE | Privacy Policy | TERMS OF USE</p>
+            <p class="copyright">2025. ALL RIGHTS RESERVED | ClearBlueImpex</p>
+            <p class="developed">Developed In <img src="images/flag/flag-7321641_1280.png" alt="India"
+                    class="flag-icon">With <span class="heart"><i class="fa-solid fa-heart"
+                        style="color: #ff0000;"></i></span> By FAVIT</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
